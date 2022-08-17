@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/third_page.dart';
+
+// Screen 2
 
 class SecondPage extends StatelessWidget {
   const SecondPage({Key? key}) : super(key: key);
@@ -207,6 +210,20 @@ class SecondPage extends StatelessWidget {
                       ),
                     ),
                   ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                MaterialButton(
+                  color: Colors.grey[200],
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => ThirdPage()));
+                  },
+                  child: const Center(child: Text('Next Page')),
+                ),
+                const SizedBox(
+                  height: 20,
                 ),
               ],
             ),
